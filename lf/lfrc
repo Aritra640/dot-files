@@ -1,0 +1,19 @@
+cmd newfile $read "Enter file name: " && touch "$f"
+
+cmd newdir $read "Enter directory name: " && mkdir -p "$f"
+
+cmd trash $rm -rf "$fx"
+
+cmd trash confirm "Are you sure you want to delete $fx?" && $rm -rf "$fx"
+
+map d :trash
+map n :newfile
+map N :newdir
+
+cmd hxdir $read "Enter directory name: " && mkdir -p "$f" && cd "$f" && hx .
+
+map H :hxdir
+
+cmd hxopen $echo ":e $fx" > /tmp/hx_cmd && fg
+
+map H :hxopen
