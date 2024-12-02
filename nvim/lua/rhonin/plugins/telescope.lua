@@ -24,6 +24,11 @@ return {
 
     telescope.setup({
       defaults = {
+        layout_config = {
+          horizontal = {
+            preview_cutoff = 0,
+          },
+        },
         path_display = { "smart" },
         mappings = {
           i = {

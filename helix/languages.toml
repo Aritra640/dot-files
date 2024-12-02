@@ -10,7 +10,7 @@ formatter = {command = "clang-format"}
 
  [language-server.emmet-ls]
  command = "emmet-ls"
- args = ["--studio"]
+ args = ["--stdio"]
 
 [[language]]
 name = "html"

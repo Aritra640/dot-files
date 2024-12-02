@@ -140,6 +140,23 @@ return {
 					},
 				})
 			end,
+			["gopls"] = function()
+				lspconfig["gopls"].setup({
+					on_attach = function()
+						--The Primeagen dotfile had this
+					end,
+					cmd = { "gopls", "serve" },
+					settings = {
+						gopls = {
+							analyses = {
+								unusedparams = true,
+							},
+							staticcheck = true,
+						},
+					},
+					capabilities = capabilities,
+				})
+			end,
 		})
 	end,
 }

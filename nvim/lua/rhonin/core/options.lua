@@ -1,5 +1,4 @@
 vim.cmd("let g:netrw_liststyle = 3")
-
 local opt = vim.opt
 
 opt.relativenumber = true
@@ -12,6 +11,7 @@ opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
 opt.wrap = true
+vim.cmd("set showbreak=↪")
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
